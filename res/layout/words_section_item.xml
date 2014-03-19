@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingRight="?android:attr/scrollbarSize"
+    android:minHeight="?android:attr/listPreferredItemHeight"
+    android:orientation="horizontal"
+    android:baselineAligned="false" >
+    
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical"
+        android:layout_marginRight="4dip"
+        style="?android:attr/borderlessButtonStyle" >
+        
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dip"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        <include
+            android:id="@+id/bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title"
+            layout="@layout/words_section_bar" />
+        
+    </RelativeLayout>
+    
+    <ImageButton
+        android:id="@+id/popup"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:src="@android:drawable/ic_menu_sort_by_size"
+        android:contentDescription="@string/progress_menu_title"
+        style="?android:attr/borderlessButtonStyle" />
+
+</LinearLayout>

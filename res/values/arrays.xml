@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="preference_training_bias_title">
+        <item>Very strong bias</item>
+        <item>Strong bias</item>
+        <item>Weak bias</item>
+        <item>No bias</item>
+    </string-array>
+    <string-array name="preference_training_bias_value">
+        <item>100</item>
+        <item>10</item>
+        <item>2</item>
+        <item>1</item>
+    </string-array>
+</resources>

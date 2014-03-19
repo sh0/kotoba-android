@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <CheckBoxPreference
+        android:key="furigana_sentences"
+        android:defaultValue="true"
+        android:title="Furigana in sentences"
+        android:summary="Show furigana when viewing sample sentences" />
+    <CheckBoxPreference
+        android:key="furigana_training"
+        android:defaultValue="true"
+        android:title="Furigana in training"
+        android:summary="Show furigana in vocabulary training" />
+    
+    <ListPreference
+        android:key="training_bias"
+        android:defaultValue="10"
+        android:entries="@array/preference_training_bias_title"
+        android:entryValues="@array/preference_training_bias_value"
+        android:title="Training bias"
+        android:summary="Bias of asking less or incorrectly answered questions more often" />
+    
+    <!--
+    <Preference
+        android:key="training_repeat"
+        android:title="Training repetition"
+        android:summary="Minimum number of questions before same word can appear again in training" />
+     -->
+    
+</PreferenceScreen>

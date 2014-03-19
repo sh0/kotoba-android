@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <item
+        android:id="@+id/train_en"
+        android:title="@string/progress_menu_train_en"/>
+    <item
+        android:id="@+id/train_jp"
+        android:title="@string/progress_menu_train_jp"/>
+    <item
+        android:id="@+id/edit"
+        android:title="@string/progress_menu_edit"/>
+
+</menu>

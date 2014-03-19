@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/progress_a"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        android:gravity="center"
+        android:singleLine="true"
+        android:ellipsize="none"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:background="#74E600" />
+    
+    <TextView
+        android:id="@+id/progress_b"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        android:gravity="center"
+        android:singleLine="true"
+        android:ellipsize="none"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:background="#FBFE00" />
+    
+    <TextView
+        android:id="@+id/progress_c"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        android:gravity="center"
+        android:singleLine="true"
+        android:ellipsize="none"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:background="#FFC300" />
+    
+    <TextView
+        android:id="@+id/progress_d"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        android:gravity="center"
+        android:singleLine="true"
+        android:ellipsize="none"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:background="#FF4C00" />
+    
+    <TextView
+        android:id="@+id/progress_e"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        android:gravity="center"
+        android:singleLine="true"
+        android:ellipsize="none"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:background="#808080" />
+
+</LinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Kotoba-chan</string>
+    
+    <string name="preferences">Settings</string>
+    
+    <string name="section_words">Vocabulary</string>
+    <string name="section_search">Search</string>
+    
+    <string name="progress_menu_title">Actions</string>
+    <string name="progress_menu_train_en">Train (English answers)</string>
+    <string name="progress_menu_train_jp">Train (Japanese answers)</string>
+    <string name="progress_menu_edit">Edit</string>
+    
+    <string name="alert_error">Error</string>
+    <string name="alert_ok">Ok</string>
+    
+    <string name="db_loading">Loading...</string>
+    <string name="db_loading_database">Loading database...</string>
+    <string name="db_loading_files">Loading files...</string>
+    <string name="db_loading_user">Loading user data...</string>
+    <string name="db_loading_train">Loading training data...</string>
+    
+    <string name="words_menu_train_english">Train (English answers)</string>
+    <string name="words_menu_train_japanese">Train (Japanese answers)</string>
+    <string name="words_menu_view">View words</string>
+    <string name="words_menu_reset">Reset</string>
+    
+    <string name="search_hint">Search</string>
+    
+</resources>
