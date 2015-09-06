@@ -27,7 +27,6 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 import android.os.AsyncTask;
-
 import ee.yutani.kotoba.DataTrainWord.SectionTrain;
 import ee.yutani.kotoba.DataTrainWord.WordTrain;
 
@@ -190,7 +189,8 @@ public class DataTrainQuestion extends AsyncTask<Boolean, Void, Void>
             m_id_recent.remove();
 
         // Choice generation
-        m_id_choice = GenerateChoice(NUM_CHOICE, m_section.WordLength(), m_id_next);
+        int size = NUM_CHOICE > m_section.WordLength() ? m_section.WordLength() : NUM_CHOICE;
+        m_id_choice = GenerateChoice(size, m_section.WordLength(), m_id_next);
 
         // Execute
         this.execute(false);
@@ -211,7 +211,7 @@ public class DataTrainQuestion extends AsyncTask<Boolean, Void, Void>
     public void SetCorrect(boolean correct) { m_correct = correct; }
 
     // Choice generation
-    private int[] GenerateChoice(int size, int range, int answer)
+    private static int[] GenerateChoice(int size, int range, int answer)
     {
         // Check
         assert(range > size);

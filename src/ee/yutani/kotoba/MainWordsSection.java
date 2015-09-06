@@ -25,14 +25,12 @@ package ee.yutani.kotoba;
 import java.util.ArrayList;
 import java.util.TreeMap;
 
-import ee.yutani.kotoba.DataTrainWord.IdTrain;
-import ee.yutani.kotoba.DataTrainWord.SectionTrain;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.os.Bundle;
 import android.app.AlertDialog;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -45,6 +43,8 @@ import android.widget.ListView;
 import android.widget.PopupMenu;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import ee.yutani.kotoba.DataTrainWord.IdTrain;
+import ee.yutani.kotoba.DataTrainWord.SectionTrain;
 
 // Fragment class
 public class MainWordsSection extends Fragment implements AppMain.FragmentCallback
@@ -490,6 +490,10 @@ public class MainWordsSection extends Fragment implements AppMain.FragmentCallba
                         next_state.putInt(MainWordsTrain.STATE_MODE, 1);
                     }
                     next_state.putIntArray(STATE_ID, section.Id().Serialize());
+                    
+                    int word_count = DataTrainQuestion.NUM_CHOICE > section.WordLength() ? section.WordLength() : DataTrainQuestion.NUM_CHOICE;
+                    next_state.putInt("word_count", word_count);
+                    
                     next_fragment = MainWordsTrain.create(next_state);
                 }
                 break;
