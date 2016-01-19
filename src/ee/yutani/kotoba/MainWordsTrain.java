@@ -25,16 +25,11 @@ package ee.yutani.kotoba;
 import java.util.ArrayList;
 import java.util.List;
 
-import ee.yutani.kotoba.DataFileWord.Sense;
-import ee.yutani.kotoba.DataFileWord.WordInfo;
-import ee.yutani.kotoba.DataTrainWord.IdTrain;
-import ee.yutani.kotoba.DataTrainWord.SectionTrain;
-import ee.yutani.kotoba.DataTrainWord.WordTrain;
+import android.app.Fragment;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,6 +38,11 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import ee.yutani.kotoba.DataFileWord.Sense;
+import ee.yutani.kotoba.DataFileWord.WordInfo;
+import ee.yutani.kotoba.DataTrainWord.IdTrain;
+import ee.yutani.kotoba.DataTrainWord.SectionTrain;
+import ee.yutani.kotoba.DataTrainWord.WordTrain;
 
 // Words training fragment
 public class MainWordsTrain extends Fragment implements View.OnClickListener, DataTrainSelector.TrainEvent, AppMain.FragmentCallback, SharedPreferences.OnSharedPreferenceChangeListener
@@ -190,7 +190,8 @@ public class MainWordsTrain extends Fragment implements View.OnClickListener, Da
     // Arguments
     public static final String STATE_MODE = "mode";
     public static final String STATE_ID = "id";
-
+    public static final String WORD_COUNT = "word_count";
+    
     public static final String STATE_TRAIN_ID_CUR = "train_id_cur";
     public static final String STATE_TRAIN_ID_LAST = "train_id_last";
     public static final String STATE_TRAIN_ID_RECENT = "train_id_recent";
@@ -202,6 +203,7 @@ public class MainWordsTrain extends Fragment implements View.OnClickListener, Da
     public static final String STATE_SENTENCE_TOP = "sentence_top";
 
     // State
+    private int m_word_count = -1;
     private int m_state_mode = -1;
     private int[] m_state_id = null;
 
@@ -280,6 +282,8 @@ public class MainWordsTrain extends Fragment implements View.OnClickListener, Da
                 m_state_mode = state.getInt(STATE_MODE);
             if (state.containsKey(STATE_ID))
                 m_state_id = state.getIntArray(STATE_ID);
+            if (state.containsKey(WORD_COUNT))
+                m_word_count = state.getInt(WORD_COUNT);
 
             // Train
             if (state.containsKey(STATE_TRAIN_ID_CUR))
@@ -339,7 +343,7 @@ public class MainWordsTrain extends Fragment implements View.OnClickListener, Da
 
         // Answers choice list
         ArrayList<ChoiceItem> choice_list = new ArrayList<ChoiceItem>();
-        for (int i = 0; i < DataTrainQuestion.NUM_CHOICE; i++) {
+        for (int i = 0; i < m_word_count; i++) {
             ChoiceItem choice = new ChoiceItem(getActivity());
             choice_list.add(choice);
         }
@@ -708,6 +712,10 @@ public class MainWordsTrain extends Fragment implements View.OnClickListener, Da
         // Put ids
         if (m_state_id != null)
             state.putIntArray(STATE_ID, m_state_id);
+        
+        // Put word count
+        if(m_word_count >= 0)
+            state.putInt(WORD_COUNT, m_word_count);
 
         // Training
         if (m_state_train_id_cur >= 0)

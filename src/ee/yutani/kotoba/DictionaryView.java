@@ -29,7 +29,9 @@ import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.TextUtils;
 import android.text.style.BulletSpan;
+import android.view.HapticFeedbackConstants;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -40,7 +42,7 @@ import ee.yutani.kotoba.DataTrainWord.SectionTrain;
 import ee.yutani.kotoba.DataTrainWord.WordTrain;
 
 // Dictionary view class
-public class DictionaryView implements View.OnClickListener
+public class DictionaryView implements View.OnTouchListener
 {
     // Context
     private Activity m_activity = null;
@@ -58,7 +60,10 @@ public class DictionaryView implements View.OnClickListener
     // Color info
     private boolean m_color_exists = false;
     private int m_color_level = 0;
-
+    
+    private float touchX;
+    private final float DRAG_THRESHOLD_X = 50.0f;
+    
     // Constructors
     public DictionaryView(Activity activity, SearchWord word)
     {
@@ -89,6 +94,22 @@ public class DictionaryView implements View.OnClickListener
         }
     }
 
+    private void updateViewColor(TextView view_score){
+    	if (m_color_exists) {
+        view_score.setVisibility(View.VISIBLE);
+        int color = 0xff808080;
+        switch (m_color_level) {
+            case 1: color = 0xffff4c00; break;
+            case 2: color = 0xffffc300; break;
+            case 3: color = 0xfffbfe00; break;
+            case 4: color = 0xff74e600; break;
+        }
+        view_score.setBackgroundColor(color);
+	    } else {
+	        view_score.setVisibility(View.GONE);
+	    }
+    }
+    
     // View
     public View getView(int position, View view, ViewGroup parent)
     {
@@ -108,19 +129,7 @@ public class DictionaryView implements View.OnClickListener
         assert(m_info != null);
 
         // Color
-        if (m_color_exists) {
-            view_score.setVisibility(View.VISIBLE);
-            int color = 0xff808080;
-            switch (m_color_level) {
-                case 1: color = 0xffff4c00; break;
-                case 2: color = 0xffffc300; break;
-                case 3: color = 0xfffbfe00; break;
-                case 4: color = 0xff74e600; break;
-            }
-            view_score.setBackgroundColor(color);
-        } else {
-            view_score.setVisibility(View.GONE);
-        }
+        updateViewColor(view_score);
 
         // Reading text
         String text_r = "";
@@ -181,14 +190,14 @@ public class DictionaryView implements View.OnClickListener
         view_text_e.setText(text_e);
 
         // Click handler
-        view.setOnClickListener(this);
+        view.setOnTouchListener(this);
 
         // Return view
         return view;
     }
 
     // Click
-    @Override public void onClick(View view)
+    public void onClick(View view)
     {
         // Info populating
         if (m_info == null)
@@ -206,5 +215,54 @@ public class DictionaryView implements View.OnClickListener
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         ft.addToBackStack(null);
         ft.commit();
+    }
+    
+    // Touch
+	@Override public boolean onTouch(View view, MotionEvent event) {
+        int eventCase = event.getAction() & MotionEvent.ACTION_MASK;
+        if (eventCase == MotionEvent.ACTION_DOWN) {
+            // keep track of where on the button we originally pressed in order
+            // to tell if we've swiped
+            touchX = event.getX();
+        } else {
+            if (eventCase == MotionEvent.ACTION_CANCEL) {
+                return true;
+            }
+
+            float distanceFromTouchX = Math.abs(touchX - event.getX());
+
+            // if we release our click without swiping much
+            if (eventCase == MotionEvent.ACTION_UP) {
+                if (distanceFromTouchX < DRAG_THRESHOLD_X) {
+                    onClick(view);
+                    view.performClick();
+                    return true;
+                } else {
+                    return true;
+                }
+            }
+            // if we swipe our a certain amount either left or right
+            else if (eventCase == MotionEvent.ACTION_MOVE) {
+                if (distanceFromTouchX > DRAG_THRESHOLD_X) {
+                    WordTrain entry = m_section.WordEntry(m_id);
+
+                    // if swipe right
+                    if (touchX < event.getX()) {
+                        entry.SetScore(DataTrainWord.TRAIN_LEVELS - 1);
+                    } else { // swipe left
+                        entry.SetScore(0);
+                    }
+
+                    // update the color on the view
+                    m_color_level = entry.Score();
+                    TextView view_score = (TextView) view.findViewById(R.id.score);
+                    updateViewColor(view_score);
+                    
+                    view.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
+                    return true;
+                }
+            }
+        }
+        return true;
     }
 }
