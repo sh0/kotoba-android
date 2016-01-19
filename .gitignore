@@ -1,5 +1,9 @@
-assets/
-bin/
-gen/
-.metadata
-.settings/
+# Defaults
+.gradle
+/local.properties
+/.idea
+.DS_Store
+/app/build
+
+# Assets
+/app/src/main/assets

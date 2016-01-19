@@ -1,23 +1,17 @@
-## Kotoba-chan ##
+## Kotoba - Advanced Japanese ##
 
-Android store: [Kotoba-chan](https://play.google.com/store/apps/details?id=ee.yutani.kotoba)
+Android store: [Kotoba](https://play.google.com/store/apps/details?id=ee.yutani.kotoba)
 
 ### Features ###
 
 * 169 715 words and phrases
 * 150 060 sample sentences (with furigana and English translation)
-* Lots of bugs
-* Horrible Java code
 
 ### Development ###
 
 The whole project is licensed under GPLv2.
 
-This app was mashed together in one month in the summer of 2013. As my first Android project, the style of the code is not very good and lacks in many respects.
-
-Feel free to fork and hack. I do not have time for core development, but I will try to merge requests to main tree and to do new version releasing if there is any interest.
-
-The database creation tools are in different repository called kotoba-data. However these scripts have become too complex and are difficult to further optimize. So my personal idea was to develop a set of tools to modify the current database iteratively and not create any special rules for the database creation scripts.
+The database creation tools are in different repository called kotoba-data. These scripts have become too complex and are difficult to further optimize. Compiled databases should be placed in assets folder.
 
 ### Credits ###
 

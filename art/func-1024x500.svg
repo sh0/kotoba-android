@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1024"
+   height="500"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="func-1024x500.svg"
+   inkscape:export-filename="/home/sh0/projects/kotoba/git-android/art/func-1024x500.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="1"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="547.32784"
+     inkscape:cy="358.87766"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer8"
+     showgrid="true"
+     inkscape:showpageshadow="false"
+     inkscape:window-width="1994"
+     inkscape:window-height="1447"
+     inkscape:window-x="564"
+     inkscape:window-y="37"
+     inkscape:window-maximized="0"
+     fit-margin-left="2.7755576e-17">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2985"
+       empspacing="8"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true"
+       spacingx="8px"
+       spacingy="8px" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Image"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-552.36218)"
+     sodipodi:insensitive="true"
+     style="display:none;opacity:0.5">
+    <image
+       sodipodi:absref="/home/sh0/projects/kotoba/git-android/art/../../../chere/git-assets/logo-crane/crane.jpg"
+       xlink:href="../../../chere/git-assets/logo-crane/crane.jpg"
+       width="512"
+       height="512"
+       id="image2999"
+       x="0"
+       y="540.36218" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer7"
+     inkscape:label="Gradient"
+     transform="translate(0,-12)" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer8"
+     inkscape:label="Text"
+     transform="translate(0,-200)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Droid Sans Mono';-inkscape-font-specification:'Droid Sans Mono';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="757.00055"
+       y="494.67773"
+       id="text4158"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4160"
+         x="757.00055"
+         y="494.67773"
+         style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:125px;font-family:'M+ 2p';-inkscape-font-specification:'M+ 2p Thin';text-align:center;text-anchor:middle">Kotoba</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Droid Sans Mono';-inkscape-font-specification:'Droid Sans Mono';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="758.4502"
+       y="538.22913"
+       id="text4158-3"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4160-0"
+         x="758.4502"
+         y="538.22913"
+         style="font-style:normal;font-variant:normal;font-weight:100;font-stretch:normal;font-size:43.75px;font-family:'M+ 2p';-inkscape-font-specification:'M+ 2p Thin';text-align:center;text-anchor:middle">Advanced Japanese</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer6"
+     inkscape:label="Tail"
+     transform="translate(0,-12)" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="Right"
+     style="display:inline"
+     transform="translate(0,-12)" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="Center"
+     transform="translate(0,-12)" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Left"
+     transform="translate(0,-12)" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Head"
+     transform="translate(0,-12)">
+    <g
+       id="g4165"
+       transform="translate(34.654206,6)">
+      <path
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="path3803"
+         d="M 320,304 496,56 296,288 Z"
+         style="fill:#9933cc;stroke:none" />
+      <path
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="path3805"
+         d="m 320,296 40,8 136,-248 z"
+         style="fill:#aa66cc;stroke:none" />
+      <path
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="path3789"
+         d="M 160,344 104,272 64,40 208,304 Z"
+         style="display:inline;fill:#33b5e5;stroke:none" />
+      <path
+         sodipodi:nodetypes="cccccc"
+         inkscape:connector-curvature="0"
+         id="path3791"
+         d="M 208,312 64,40 l 192,160 16,72 -32,-24 z"
+         style="display:inline;fill:#0099cc;stroke:none" />
+      <path
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="path3794"
+         d="m 192,384 -32,-40 80,-96 z"
+         style="fill:#ff8800;fill-opacity:1;stroke:none" />
+      <path
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="path3796"
+         d="m 176,408 64,-160 0,128 z"
+         style="fill:#ffbb33;fill-opacity:1;stroke:none" />
+      <path
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="path3800"
+         d="m 240,376 80,-80 -80,-48 z"
+         style="fill:#ff8800;fill-opacity:1;stroke:none" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3782"
+         d="m 176,408 40,16 -40,48 z"
+         style="fill:#669900;stroke:none" />
+      <path
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="path3784"
+         d="M 216,424 504,408 240,368 176,408 Z"
+         style="fill:#99cc00;fill-opacity:1;stroke:none" />
+      <path
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="path3786"
+         d="m 504,408 -120,-112 -64,0 -80,72 z"
+         style="fill:#669900;stroke:none" />
+      <path
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="path3003"
+         d="m 8,328 56,-72 32,0 -40,40 z"
+         style="fill:#cc0000;fill-opacity:1;stroke:none" />
+      <path
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="path3005"
+         d="m 8,328 72,-40 16,-8 0,-24 z"
+         style="fill:#ff4444;fill-opacity:1;stroke:none" />
+      <path
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="path3777"
+         d="m 88,272 80,176 -8,16 -80,-176 z"
+         style="fill:#cc0000;stroke:none" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3775"
+         d="m 96,256 96,112 -16,40 0,64 -88,-200 z"
+         style="fill:#ff4444;fill-opacity:1;stroke:none" />
+    </g>
+  </g>
+</svg>
