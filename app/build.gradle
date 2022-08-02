@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.2"
+    compileSdkVersion 32
+    buildToolsVersion "33.0.0"
 
     defaultConfig {
         applicationId "ee.yutani.kotoba"
         minSdkVersion 19
-        targetSdkVersion 23
+        targetSdkVersion 32
     }
 
     buildTypes {
